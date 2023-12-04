@@ -1,42 +1,24 @@
-# Udagram Image Filtering Microservice
+# Full Stack Apps on AWS Project
 
-## Tasks
+You have been hired as a software engineer to develop an application that will help the FBI find missing people.  The application will upload images to the FBI cloud database hosted in AWS. This will allow the FBI to run facial recognition software on the images to detect a match. You will be developing a NodeJS server and deploying it on AWS Elastic Beanstalk. 
+You will build upon the application we've developed during the lessons in this course. You'll complete a REST API endpoint in a backend service that processes incoming image URLs.
 
-### Setup Node Environment
+## Getting Started
 
-You'll need to create a new node server. Open a new terminal within the project directory and run:
+You can clone this repo to run the project locally, or navigate to the workspace in the Udacity course.
 
-1. Initialize a new project: `npm i`
-2. run the development server with `npm run dev`
+## Project Instructions
 
-### Create a new endpoint in the server.ts file
+To complete this project, you will need to:
 
-The starter code has a task for you to complete an endpoint in `./src/server.ts` which uses query parameter to download an image from a public URL, filter the image, and return the result.
+* Set up node environment
+* Create a new endpoint in the server.js file
+* Deploying your system
 
-We've included a few helper functions to handle some of these concepts and we're importing it for you at the top of the `./src/server.ts`  file.
+## Testing
 
-```typescript
-import {filterImageFromURL, deleteLocalFiles} from './util/util';
-```
+Successful URL responses should have a 200 code. Ensure that you include error codes for the scenario that someone uploads something other than an image and for other common errors.
 
-### Deploying your system
+## License
 
-Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
-
-## Stand Out (Optional)
-
-### Refactor the course RESTapi
-
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
-
-### Authentication
-
-Prevent requests without valid authentication headers.
-> !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
-
-### Custom Domain Name
-
-Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
-> !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
-
-http://udacity-c2-image-filter-dev2.us-east-1.elasticbeanstalk.com/
+[License](LICENSE.txt)
